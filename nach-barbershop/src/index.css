@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+
+@font-face {
+  font-family: 'Crimson Text';
+  src: url(fonts/Crimson/CrimsonText-Roman.ttf);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.crimsontext {
+  font-family: 'Crimson Text', serif;
+}
