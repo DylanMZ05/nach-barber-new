@@ -1,5 +1,5 @@
 import React from 'react';
-import Precios from './precios';
+import Precios from './precios-card';
 
 
 const Prices: React.FC = () => {
@@ -7,7 +7,7 @@ const Prices: React.FC = () => {
         <section className='w-screen h-auto flex flex-col items-center justify-center mb-[50px]'>
 
             <div className='w-screen h-auto flex flex-col items-center justify-center'>
-                <h3 className="text-[40px] font-semibold">NUESTROS SERVICIOS</h3>
+                <h3 className="text-[40px] font-semibold ts-sm">NUESTROS SERVICIOS</h3>
                 <div className="h-1 bg-blue-600 w-75 mx-auto mt-2 rounded-4xl"></div>
             </div>
 
