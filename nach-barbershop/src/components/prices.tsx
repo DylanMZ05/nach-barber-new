@@ -15,15 +15,15 @@ const Prices: React.FC = () => {
                 <div className='flex justify-between items-center mt-[25px]'>
                     <img src="./public/media/barba.png" alt="" className='w-[60px] aspect-square mr-[15px]'/> 
                     <div>
-                        <p className='font-semibold'>En <span className='text-red-600 font-bold'>NACH Barbershop</span>, transformamos tu estilo.</p>
-                        <p>Vos solo preocupate por llevarlo con confianza</p>
+                        <p className='font-semibold text-2xl'>En <span className='text-red-600 font-bold'>NACH Barbershop</span>, transformamos tu estilo.</p>
+                        <p className='text-2xl'>Vos solo preocupate por llevarlo con confianza</p>
                     </div>
                 </div>
 
                 <div className='flex justify-between items-center mt-[25px]'>
                     <div>
-                        <p className='font-semibold'>En <span className='text-blue-600 font-bold'>NACH Barbershop</span>, garantizamos calidad y estilo.</p>
-                        <p>Una atención personalizada con productos premium</p>
+                        <p className='font-semibold text-2xl'>En <span className='text-blue-600 font-bold'>NACH Barbershop</span>, garantizamos calidad y estilo.</p>
+                        <p className='text-2xl'>Una atención personalizada con productos premium</p>
                     </div>
                     <img src="./public/media/peluqueria.png" alt="" className='h-[60px] ml-[15px]'/>
                 </div>

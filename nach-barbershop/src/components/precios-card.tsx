@@ -7,7 +7,7 @@ interface Prices {
 
 const Prices: React.FC<Prices> = ({ corte, precio }) => {
     return (
-        <div className='flex justify-between w-[480px]'>
+        <div className='flex justify-between w-[695px]'>
             <p className='font-semibold text-[24px] ts-sm'>{corte}</p>
             <p className='font-semibold text-blue-500 text-[24px] ts-sm'>{precio}</p>
         </div>

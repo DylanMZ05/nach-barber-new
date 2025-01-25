@@ -7,7 +7,7 @@ const Header: React.FC = () => {
     return (
         <header
         className={`w-screen h-auto fixed z-50 transition-colors duration-300 ${
-            isScrolled ? 'bg-black/99' : 'bg-gradient-to-b from-black to-transparent'
+            isScrolled ? 'bg-neutral-950' : 'bg-gradient-to-b from-black to-transparent'
             }`}
         >
             <div className="flex justify-between items-center text-white">
