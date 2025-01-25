@@ -10,7 +10,7 @@ const Sucursales: React.FC = () => {
                 <div className="h-1 bg-red-600 w-75 mx-auto mt-2 rounded-4xl"></div>
             </div>
 
-            <div className="grid grid-cols-2 gap-7">
+            <div className="grid grid-cols-2 gap-15">
                 <div>
                     <img src="../../public/media/sucursal-1.jpeg" alt="" className="w-[450px] rounded-2xl mb-[15px]"/>
                     
