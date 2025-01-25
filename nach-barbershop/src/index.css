@@ -16,6 +16,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .crimsontext {
   font-family: 'Crimson Text', serif;
 }

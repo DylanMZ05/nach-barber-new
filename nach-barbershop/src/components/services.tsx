@@ -26,7 +26,7 @@ const Services: React.FC = () => {
     ];
 
     return (
-        <section className='h-[650px] w-screen flex flex-col items-center relative'>
+        <section id='inspiracion' className='h-[650px] w-screen flex flex-col items-center relative'>
             <div className='w-[90vw] h-100  -translate-y-15 flex flex-col justify-start align-center text-center text-white'>
                 <div className="bg-neutral-900 pt-15 pb-25 w-[90vw] mx-auto">
                     <div className="text-center text-white mb-8">

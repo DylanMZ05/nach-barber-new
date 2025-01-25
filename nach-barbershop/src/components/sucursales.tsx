@@ -3,10 +3,10 @@ import React from "react";
 const Sucursales: React.FC = () => {
     
     return (
-        <section className='w-screen h-auto bg-neutral-900 flex flex-col items-center justify-center py-[50px]'>
+        <section id="ubicaciones" className='w-screen h-auto bg-neutral-900 flex flex-col items-center justify-center py-[50px]'>
         
             <div className='w-screen h-auto flex flex-col items-center justify-center mb-[50px]'>
-                <h3 className="text-[40px] font-semibold text-white ts-sm">NUESTROS SERVICIOS</h3>
+                <h3 className="text-[40px] font-semibold text-white ts-sm">NUESTRAS SUCURSALES</h3>
                 <div className="h-1 bg-red-600 w-75 mx-auto mt-2 rounded-4xl"></div>
             </div>
 

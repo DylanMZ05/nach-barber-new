@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-neutral-950 flex justify-around py-10">
+        <footer id='contacto' className="bg-neutral-950 flex justify-around py-10">
             <div className="text-white p-2">
                 <img
                     src="../public/media/Logo.png"
