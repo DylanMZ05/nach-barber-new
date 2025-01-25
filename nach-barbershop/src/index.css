@@ -43,3 +43,15 @@ html {
 .img-shadow {
   filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.9));
 }
+
+#inicio,
+#inspiracion,
+#ubicaciones,
+#contacto {
+  scroll-margin-top: 96px;
+}
+
+#servicios,
+#precios {
+  scroll-margin-top: 138px;
+}

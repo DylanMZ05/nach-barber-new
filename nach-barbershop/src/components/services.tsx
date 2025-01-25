@@ -26,9 +26,9 @@ const Services: React.FC = () => {
     ];
 
     return (
-        <section id='inspiracion' className='h-[650px] w-screen flex flex-col items-center relative'>
+        <section className='h-[650px] w-screen flex flex-col items-center relative'>
             <div className='w-[90vw] h-100  -translate-y-15 flex flex-col justify-start align-center text-center text-white'>
-                <div className="bg-neutral-900 pt-15 pb-25 w-[90vw] mx-auto">
+                <div id='inspiracion' className="bg-neutral-900 pt-[50px] pb-[75px] w-[90vw] mx-auto">
                     <div className="text-center text-white mb-8">
                         <h3 className="text-[40px] font-semibold">EXPLORA LO MEJOR DEL ESTILO MASCULINO</h3>
                         <div className="h-1 bg-red-600 w-75 mx-auto mt-2 rounded-4xl"></div>
