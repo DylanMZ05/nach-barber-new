@@ -13,7 +13,7 @@ const Header: React.FC = () => {
             <div className="flex justify-between items-center text-white">
                 <div className="flex items-center p-2 ml-10">
                     <img
-                        src="../public/media/Logo.png"
+                        src="/nach-barber-new/media/Logo.png"
                         alt="Logo"
                         className="h-20 mr-2 img-shadow"
                     />

@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
         <footer id='contacto' className="bg-neutral-950 flex justify-around py-10">
             <div className="text-white p-2">
                 <img
-                    src="../public/media/Logo.png"
+                    src="/nach-barber-new/media/Logo.png"
                     alt="Logo"
                     className="h-25 mb-2 img-shadow"
                 />
@@ -49,10 +49,10 @@ const Footer: React.FC = () => {
                 <h2 className="text-3xl font-bold mb-4 text-white">Redes</h2>
                 <div className="grid grid-cols-2 gap-4">
                     <a href="">
-                        <img src="../public/media/instagram.png" alt="" className="h-13"/>
+                        <img src="/nach-barber-new/media/instagram.png" alt="" className="h-13"/>
                     </a>
                     <a href="">
-                        <img src="../public/media/whatsapp.png" alt="" className="h-13 rounded-[12px]"/>
+                        <img src="/nach-barber-new/media/whatsapp.png" alt="" className="h-13 rounded-[12px]"/>
                     </a>
                 </div>
             </div>

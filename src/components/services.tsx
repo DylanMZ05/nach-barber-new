@@ -4,22 +4,22 @@ import Card from './card';
 const Services: React.FC = () => {
     const cards = [
         {
-            image: '../../media/Cortes/corte-12.jpg',
+            image: '/nach-barber-new/media/Cortes/corte-12.jpg',
             text: 'CORTES DE CABELLO',
             link: '/cortes-de-cabello',
         },
         {
-            image: '../../media/Barbas/barba-1.jpeg',
+            image: '/nach-barber-new/media/Barbas/barba-1.jpeg',
             text: 'ESTILOS DE BARBA',
             link: '/estilos-de-barba',
         },
         {
-            image: '../../media/Diseños/diseño-1.jpg',
+            image: '/nach-barber-new/media/Diseños/diseño-1.jpg',
             text: 'GALERÍA DE DISEÑOS',
             link: '/galeria-de-disenos',
         },
         {
-            image: '../../media/Productos/productos7.jpeg',
+            image: '/nach-barber-new/media/Productos/productos7.jpeg',
             text: 'PRODUCTOS',
             link: '/productos',
         },

@@ -2,9 +2,9 @@ import React from 'react';
 
 const Hero: React.FC = () => {
     return (
-        <main id='inicio' className="bg-[url('../public/media/background.jpg')] h-screen bg-cover bg-center">
+        <main id='inicio' className="bg-[url('/nach-barber-new/media/background.jpg')] h-screen bg-cover bg-center">
             <section className="bg-black/40 bg-center h-screen w-screen flex flex-col justify-center items-center text-white ts-xl">
-                <img src="../public/media/Logo.png" alt="Logo" className="w-35 mb-[4vh] img-shadow" />
+                <img src="/nach-barber-new/media/Logo.png" alt="Logo" className="w-35 mb-[4vh] img-shadow" />
                 <h1 className="text-5xl font-bold crimsontext mb-[2vh] ts-xl">NACH BARBERSHOP</h1>
                 <h2 className="text-3xl font-bold mb-[1vh] text-shadow-xl ts-xl">SANTA TERESITA</h2>
 
