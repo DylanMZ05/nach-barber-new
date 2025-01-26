@@ -11,5 +11,5 @@ export default defineConfig({
       
     )
   ],
-  base: '/nach-barbershop-new/',
+  base: '/nach-barbershop-new',
 })
