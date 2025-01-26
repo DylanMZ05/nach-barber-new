@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
 
                 <div className="flex justify-between items-center font-medium">
                     <div className="flex items-center">
-                        <img src="/media/marcador.png" alt="Marcador" className="mr-2 h-10 w-10" />
+                        <img src="/nach-barber-new//media/marcador.png" alt="Marcador" className="mr-2 h-10 w-10" />
                         <div>
                             <p>Av 32 entre 3 y 4</p>
                             <p>Galería Aldea Paseo del Mar</p>
@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
                     <hr className="h-13 w-0.5 bg-white rounded-xl opacity-70 ml-4 mr-4" />
 
                     <div className="flex items-center">
-                        <img src="/media/marcador.png" alt="Marcador" className="mr-2 h-10 w-10" />
+                        <img src="/nach-barber-new//media/marcador.png" alt="Marcador" className="mr-2 h-10 w-10" />
                         <div>
                             <p>Av 32 entre 3 y 4</p>
                             <p>Galería Aldea Paseo del Mar</p>
