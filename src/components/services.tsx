@@ -26,14 +26,14 @@ const Services: React.FC = () => {
     ];
 
     return (
-        <section className='h-[650px] w-screen flex flex-col items-center relative'>
-            <div className='w-[90vw] h-100  -translate-y-15 flex flex-col justify-start align-center text-center text-white'>
+        <section className='w-screen flex flex-col items-center relative'>
+            <div className='w-[90vw] -translate-y-15 flex flex-col justify-start align-center text-center text-white'>
                 <div id='inspiracion' className="bg-neutral-900 pt-[50px] pb-[75px] w-[90vw] mx-auto">
                     <div className="text-center text-white mb-8">
-                        <h3 className="text-[40px] font-semibold">EXPLORA LO MEJOR DEL ESTILO MASCULINO</h3>
+                        <h3 className="text-[40px] font-semibold mx-5">EXPLORA LO MEJOR DEL ESTILO MASCULINO</h3>
                         <div className="h-1 bg-red-600 w-75 mx-auto mt-2 rounded-4xl"></div>
                     </div>
-                    <div className="mx-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+                    <div className="mx-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
                         {cards.map((card, index) => (
                             <Card key={index} image={card.image} text={card.text} link={card.link} />
                         ))}

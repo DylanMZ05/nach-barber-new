@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useScroll from '../hooks/useScroll';
 import useActiveSection from '../hooks/useActiveSection';
 
@@ -6,10 +6,12 @@ const Header: React.FC = () => {
     const isScrolled = useScroll(50);
     const sectionIds = ['inicio', 'inspiracion', 'precios', 'ubicaciones', 'contacto'];
     const [activeSection, setActiveSectionManually] = useActiveSection(sectionIds);
+    const [menuOpen, setMenuOpen] = useState(false); // Estado para el menú hamburguesa
 
     const handleClick = (id: string) => {
-      setActiveSectionManually(id); // Actualiza manualmente la sección activa
-      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }); // Scroll suave
+        setActiveSectionManually(id);
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        setMenuOpen(false); // Cierra el menú cuando se selecciona un elemento
     };
 
     return (
@@ -19,7 +21,8 @@ const Header: React.FC = () => {
             }`}
         >
             <div className="flex justify-between items-center text-white">
-                <div className="flex items-center p-2 ml-10">
+                {/* Logo */}
+                <div className="flex z-50 items-center p-2 ml-10">
                     <img
                         src="/nach-barber-new/media/Logo.png"
                         alt="Logo"
@@ -30,7 +33,33 @@ const Header: React.FC = () => {
                         BARBERSHOP
                     </p>
                 </div>
-                <ul className="flex justify-between items-center w-175 mr-20 font-medium ts-xl">
+
+                {/* Botón Hamburguesa */}
+                <button
+                    className="lg:hidden mr-10 text-white focus:outline-none z-50"
+                    onClick={() => setMenuOpen(!menuOpen)}
+                >
+                    <div
+                        className={`w-8 h-1 bg-white my-1.5 rounded transition-transform duration-300 ${
+                            menuOpen ? 'rotate-45 translate-y-2.5' : ''
+                        }`}
+                    ></div>
+                    <div
+                        className={`w-8 h-1 bg-white my-1.5 rounded transition-opacity duration-300 ${
+                            menuOpen ? 'opacity-0' : ''
+                        }`}
+                    ></div>
+                    <div
+                        className={`w-8 h-1 bg-white my-1.5 rounded transition-transform duration-300 ${
+                            menuOpen ? '-rotate-45 -translate-y-2.5' : ''
+                        }`}
+                    ></div>
+                </button>
+
+                {/* Menú principal */}
+                <ul
+                    className={`hidden lg:flex justify-between items-center w-150 mr-10 font-medium ts-xl xl:mr-20 xl:w-175`}
+                >
                     {sectionIds.map((id) => (
                         <li
                             key={id}
@@ -42,13 +71,38 @@ const Header: React.FC = () => {
                         >
                             <a
                                 href={`#${id}`}
-                                onClick={() => handleClick(id)} // Actualiza manualmente el estado y realiza scroll
+                                onClick={() => handleClick(id)}
                             >
                                 {id.charAt(0).toUpperCase() + id.slice(1)}
                             </a>
                         </li>
                     ))}
                 </ul>
+
+                {/* Menú móvil */}
+                <div
+                    className={`lg:hidden fixed z-20 top-0 left-0 w-full h-110 bg-neutral-950 text-white flex flex-col items-center justify-end space-y-8 pb-10 transform ${
+                        menuOpen ? 'translate-y-0' : '-translate-y-full'
+                    } transition-transform duration-500`}
+                >
+                    {sectionIds.map((id) => (
+                        <li
+                            key={id}
+                            className={`list-none text-2xl hover:text-red-500 transition-all duration-200 ${
+                                activeSection === id
+                                    ? 'text-red-500 underline underline-offset-5 decoration-2'
+                                    : ''
+                            }`}
+                        >
+                            <a
+                                href={`#${id}`}
+                                onClick={() => handleClick(id)}
+                            >
+                                {id.charAt(0).toUpperCase() + id.slice(1)}
+                            </a>
+                        </li>
+                    ))}
+                </div>
             </div>
         </header>
     );
