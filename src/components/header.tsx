@@ -40,11 +40,13 @@ const Header: React.FC = () => {
                     ].map((item) => (
                         <li
                             key={item.id}
-                            className={`hover:text-blue-500 hover:scale-105 transition-all duration-100 ${
-                                activeSection === item.id ? 'text-red-500 scale-105' : ''
+                            className={`hover:text-red-500 hover:scale-105 transition-all duration-100
+                            ${
+                                activeSection === item.id ? 'text-red-500 scale-105 ts-xl' : ''
                             }`}
                         >
-                            <a href={`#${item.id}`}>{item.label}</a>
+                            <a href={`#${item.id}`} >
+                                {item.label}</a>
                         </li>
                     ))}
                 </ul>
