@@ -1,10 +1,21 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
-const useActiveSection = (sectionIds: string[]): string => {
+const useActiveSection = (sectionIds: string[]): [string, (id: string) => void] => {
   const [activeSection, setActiveSection] = useState<string>('');
+  const isClicking = useRef(false);
+
+  const setActiveSectionManually = (id: string) => {
+    isClicking.current = true;
+    setActiveSection(id);
+    setTimeout(() => {
+      isClicking.current = false;
+    }, 800);
+  }
 
   useEffect(() => {
     const handleScroll = () => {
+      if (isClicking.current) return;
+
       const scrollPosition = window.scrollY + window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
 
@@ -34,7 +45,7 @@ const useActiveSection = (sectionIds: string[]): string => {
     };
   }, [sectionIds]);
 
-  return activeSection;
+  return [activeSection, setActiveSectionManually];
 };
 
 export default useActiveSection;
