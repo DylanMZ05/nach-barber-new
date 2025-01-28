@@ -18,7 +18,7 @@ const Sucursales: React.FC = () => {
                         <div className="mb-3 flex lg:mb-0">
                             <img src="/nach-barber-new/media/marcador.png" alt="" className="h-[40px] aspect-square mr-2"/>
                             <div>
-                                <p className="text-white font-semibold">Calle 2 entre 37 y 38</p>
+                                <p className="text-white font-semibold">Calle 32 entre 3 y 4</p>
                                 <p className="text-white">Galería Aldea Paseo del Mar</p>
                             </div>
                         </div>
