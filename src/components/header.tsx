@@ -63,7 +63,7 @@ const Header: React.FC = () => {
                     {sectionIds.map((id) => (
                         <li
                             key={id}
-                            className={`relative hover:text-red-500 hover:scale-105 hover:underline hover:underline-offset-5 hover:decoration-2 transition-all duration-100 ${
+                            className={`relative font-medium hover:text-red-500 hover:scale-105 hover:underline hover:underline-offset-5 hover:decoration-2 transition-all duration-100 ${
                                 activeSection === id
                                     ? 'text-red-500 underline underline-offset-5 decoration-2 scale-105'
                                     : ''
