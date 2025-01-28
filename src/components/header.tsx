@@ -6,12 +6,12 @@ const Header: React.FC = () => {
     const isScrolled = useScroll(50);
     const sectionIds = ['inicio', 'inspiracion', 'precios', 'ubicaciones', 'contacto'];
     const [activeSection, setActiveSectionManually] = useActiveSection(sectionIds);
-    const [menuOpen, setMenuOpen] = useState(false); // Estado para el menú hamburguesa
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const handleClick = (id: string) => {
         setActiveSectionManually(id);
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-        setMenuOpen(false); // Cierra el menú cuando se selecciona un elemento
+        setMenuOpen(false);
     };
 
     return (
@@ -22,13 +22,13 @@ const Header: React.FC = () => {
         >
             <div className="flex justify-between items-center text-white">
                 {/* Logo */}
-                <div className="flex z-50 items-center p-2 ml-10">
+                <div className="flex z-50 items-center p-2 pl-0 ml-5 xl:ml-15">
                     <img
                         src="/nach-barber-new/media/Logo.png"
                         alt="Logo"
                         className="h-20 mr-2 img-shadow"
                     />
-                    <p className="text-lg font-semibold crimsontext tracking-wider ts-xl">
+                    <p className="hidden sm:flex text-lg font-semibold crimsontext tracking-wider ts-xl">
                         NACH <br />
                         BARBERSHOP
                     </p>
