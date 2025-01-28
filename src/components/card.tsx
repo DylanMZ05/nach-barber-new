@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface CardProps {
     image: string;
@@ -8,7 +9,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ image, text, link }) => {
     return (
-        <a href={link} target="_blank" rel="noopener noreferrer" className="group">
+        <Link to={link} className="group">
             <div className="relative bg-transparent transform transition-transform hover:scale-103">
                 <img
                     src={image}
@@ -19,7 +20,7 @@ const Card: React.FC<CardProps> = ({ image, text, link }) => {
                     <h3 className="text-white font-bold m-0 xl:text-lg">{text}</h3>
                 </div>
             </div>
-        </a>
+        </Link>
     );
 };
 

@@ -6,7 +6,7 @@ const Services: React.FC = () => {
         {
             image: '/nach-barber-new/media/Cortes/corte-12.jpg',
             text: 'CORTES DE CABELLO',
-            link: '/cortes-de-cabello',
+            link: '/CortesDeCabello',
         },
         {
             image: '/nach-barber-new/media/Barbas/barba-1.jpeg',

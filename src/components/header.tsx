@@ -57,26 +57,62 @@ const Header: React.FC = () => {
                 </button>
 
                 {/* Menú principal */}
-                <ul
-                    className={`hidden lg:flex justify-between items-center w-150 mr-10 font-medium ts-xl xl:mr-20 xl:w-175`}
-                >
-                    {sectionIds.map((id) => (
-                        <li
-                            key={id}
-                            className={`relative font-medium hover:text-red-500 hover:scale-105 hover:underline hover:underline-offset-5 hover:decoration-2 transition-all duration-100 ${
-                                activeSection === id
-                                    ? 'text-red-500 underline underline-offset-5 decoration-2 scale-105'
-                                    : ''
-                            }`}
-                        >
-                            <a
-                                href={`#${id}`}
-                                onClick={() => handleClick(id)}
-                            >
-                                {id.charAt(0).toUpperCase() + id.slice(1)}
-                            </a>
-                        </li>
-                    ))}
+                <ul className="hidden lg:flex justify-between items-center w-150 mr-10 font-medium ts-xl xl:mr-20 xl:w-175">
+                    <li
+                        className={`relative font-medium hover:text-red-500 hover:scale-105 hover:underline hover:underline-offset-5 hover:decoration-2 transition-all duration-100 ${
+                            activeSection === 'inicio'
+                                ? 'text-red-500 underline underline-offset-5 decoration-2 scale-105'
+                                : ''
+                        }`}
+                    >
+                        <a href="/nach-barber-new/#inicio" onClick={() => handleClick('inicio')}>
+                            Inicio
+                        </a>
+                    </li>
+                    <li
+                        className={`relative font-medium hover:text-red-500 hover:scale-105 hover:underline hover:underline-offset-5 hover:decoration-2 transition-all duration-100 ${
+                            activeSection === 'inspiracion'
+                                ? 'text-red-500 underline underline-offset-5 decoration-2 scale-105'
+                                : ''
+                        }`}
+                    >
+                        <a href="/nach-barber-new/#inspiracion" onClick={() => handleClick('inspiracion')}>
+                            Inspiración
+                        </a>
+                    </li>
+                    <li
+                        className={`relative font-medium hover:text-red-500 hover:scale-105 hover:underline hover:underline-offset-5 hover:decoration-2 transition-all duration-100 ${
+                            activeSection === 'precios'
+                                ? 'text-red-500 underline underline-offset-5 decoration-2 scale-105'
+                                : ''
+                        }`}
+                    >
+                        <a href="/nach-barber-new/#precios" onClick={() => handleClick('precios')}>
+                            Precios
+                        </a>
+                    </li>
+                    <li
+                        className={`relative font-medium hover:text-red-500 hover:scale-105 hover:underline hover:underline-offset-5 hover:decoration-2 transition-all duration-100 ${
+                            activeSection === 'ubicaciones'
+                                ? 'text-red-500 underline underline-offset-5 decoration-2 scale-105'
+                                : ''
+                        }`}
+                    >
+                        <a href="/nach-barber-new/#ubicaciones" onClick={() => handleClick('ubicaciones')}>
+                            Ubicaciones
+                        </a>
+                    </li>
+                    <li
+                        className={`relative font-medium hover:text-red-500 hover:scale-105 hover:underline hover:underline-offset-5 hover:decoration-2 transition-all duration-100 ${
+                            activeSection === 'contacto'
+                                ? 'text-red-500 underline underline-offset-5 decoration-2 scale-105'
+                                : ''
+                        }`}
+                    >
+                        <a href="/nach-barber-new/#contacto" onClick={() => handleClick('contacto')}>
+                            Contacto
+                        </a>
+                    </li>
                 </ul>
 
                 {/* Menú móvil */}
@@ -85,23 +121,51 @@ const Header: React.FC = () => {
                         menuOpen ? 'translate-y-0' : '-translate-y-full'
                     } transition-transform duration-500`}
                 >
-                    {sectionIds.map((id) => (
-                        <li
-                            key={id}
-                            className={`list-none text-2xl hover:text-red-500 transition-all duration-200 ${
-                                activeSection === id
-                                    ? 'text-red-500 underline underline-offset-5 decoration-2'
-                                    : ''
-                            }`}
-                        >
-                            <a
-                                href={`#${id}`}
-                                onClick={() => handleClick(id)}
-                            >
-                                {id.charAt(0).toUpperCase() + id.slice(1)}
-                            </a>
-                        </li>
-                    ))}
+                    <a
+                        href="/nach-barber-new/#inicio"
+                        className={`text-2xl ${
+                            activeSection === 'inicio' ? 'text-red-500 underline' : ''
+                        }`}
+                        onClick={() => handleClick('inicio')}
+                    >
+                        Inicio
+                    </a>
+                    <a
+                        href="/nach-barber-new/#inspiracion"
+                        className={`text-2xl ${
+                            activeSection === 'inspiracion' ? 'text-red-500 underline' : ''
+                        }`}
+                        onClick={() => handleClick('inspiracion')}
+                    >
+                        Inspiración
+                    </a>
+                    <a
+                        href="/nach-barber-new/#precios"
+                        className={`text-2xl ${
+                            activeSection === 'precios' ? 'text-red-500 underline' : ''
+                        }`}
+                        onClick={() => handleClick('precios')}
+                    >
+                        Precios
+                    </a>
+                    <a
+                        href="/nach-barber-new/#ubicaciones"
+                        className={`text-2xl ${
+                            activeSection === 'ubicaciones' ? 'text-red-500 underline' : ''
+                        }`}
+                        onClick={() => handleClick('ubicaciones')}
+                    >
+                        Ubicaciones
+                    </a>
+                    <a
+                        href="/nach-barber-new/#contacto"
+                        className={`text-2xl ${
+                            activeSection === 'contacto' ? 'text-red-500 underline' : ''
+                        }`}
+                        onClick={() => handleClick('contacto')}
+                    >
+                        Contacto
+                    </a>
                 </div>
             </div>
         </header>
