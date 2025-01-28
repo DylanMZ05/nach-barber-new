@@ -4,12 +4,12 @@ const Hero: React.FC = () => {
     return (
         <main id='inicio' className="bg-[url('/nach-barber-new/media/background.jpg')] h-screen bg-cover bg-center">
             <section className="bg-black/40 bg-center h-screen w-screen flex flex-col justify-center items-center text-white ts-xl">
-                <img src="/nach-barber-new/media/Logo.png" alt="Logo" className="w-35 mb-[4vh] img-shadow" />
-                <h1 className="text-5xl font-bold crimsontext mb-[2vh] ts-xl">NACH BARBERSHOP</h1>
-                <h2 className="text-3xl font-bold mb-[1vh] text-shadow-xl ts-xl">SANTA TERESITA</h2>
+                <img src="/nach-barber-new/media/Logo.png" alt="Logo" className="w-35 mb-[4vh] img-shadow mx-5" />
+                <h1 className="text-5xl text-center font-bold crimsontext mb-[2vh] ts-xl mx-5">NACH BARBERSHOP</h1>
+                <h2 className="text-3xl font-bold mb-[1vh] text-shadow-xl ts-xl mx-5">SANTA TERESITA</h2>
 
-                <div className="flex justify-between items-center font-medium">
-                    <div className="flex items-center">
+                <div className="block sm:flex justify-between items-center font-medium mx-5">
+                    <div className="flex items-center my-3 sm:my-0">
                         <img src="/nach-barber-new//media/marcador.png" alt="Marcador" className="mr-2 h-10 w-10" />
                         <div>
                             <p>Av 32 entre 3 y 4</p>
@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
                         </div>
                     </div>
 
-                    <hr className="h-13 w-0.5 bg-white rounded-xl opacity-70 ml-4 mr-4" />
+                    <hr className="hidden sm:flex h-13 w-0.5 bg-white rounded-xl opacity-70 ml-4 mr-4" />
 
                     <div className="flex items-center">
                         <img src="/nach-barber-new//media/marcador.png" alt="Marcador" className="mr-2 h-10 w-10" />
