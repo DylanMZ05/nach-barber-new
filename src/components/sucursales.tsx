@@ -10,12 +10,12 @@ const Sucursales: React.FC = () => {
                 <div className="h-1 bg-red-600 w-75 mx-auto mt-2 rounded-4xl"></div>
             </div>
 
-            <div className="grid grid-cols-2 gap-15">
+            <div className="grid grid-cols-1 gap-15 mx-10 md:grid-cols-2">
                 <div>
                     <img src="/nach-barber-new/media/sucursal-1.jpeg" alt="" className="w-[450px] rounded-2xl mb-[15px]"/>
                     
-                    <div className="flex items-center justify-between">
-                        <div className="flex">
+                    <div className="block sm:flex md:block lg:flex items-center justify-between">
+                        <div className="mb-3 flex lg:mb-0">
                             <img src="/nach-barber-new/media/marcador.png" alt="" className="h-[40px] aspect-square mr-2"/>
                             <div>
                                 <p className="text-white font-semibold">Calle 2 entre 37 y 38</p>
@@ -23,7 +23,7 @@ const Sucursales: React.FC = () => {
                             </div>
                         </div>
                         
-                        <a href=""className="flex items-center bg-white py-1 px-3 rounded-4xl">
+                        <a href=""className="flex w-max items-center bg-white py-1 px-3 rounded-4xl">
                             <img src="/nach-barber-new/media/camino.png" alt="" className="h-[30px] aspect-square mr-1 "/>
                             <p className="font-semibold transform scale-y-120">Como llegar</p>
                         </a>
@@ -34,8 +34,8 @@ const Sucursales: React.FC = () => {
                 <div>
                     <img src="/nach-barber-new/media/sucursal-1.jpeg" alt="" className="w-[450px] rounded-2xl mb-[15px]"/>
                     
-                    <div className="flex items-center justify-between">
-                        <div className="flex">
+                    <div className="block sm:flex md:block lg:flex items-center justify-between">
+                        <div className="mb-3 flex lg:mb-0">
                             <img src="/nach-barber-new/media/marcador.png" alt="" className="h-[40px] aspect-square mr-2"/>
                             <div>
                                 <p className="text-white font-semibold">Calle 2 entre 37 y 38</p>
@@ -43,7 +43,7 @@ const Sucursales: React.FC = () => {
                             </div>
                         </div>
                         
-                        <a href=""className="flex items-center bg-white py-1 px-3 rounded-4xl">
+                        <a href=""className="flex w-max items-center bg-white py-1 px-3 rounded-4xl">
                             <img src="/nach-barber-new/media/camino.png" alt="" className="h-[30px] aspect-square mr-1 "/>
                             <p className="font-semibold transform scale-y-120">Como llegar</p>
                         </a>

@@ -12,20 +12,20 @@ const Prices: React.FC = () => {
             </div>
 
             <div className='flex flex-col items-start'>
-                <div className='flex justify-between items-center mt-[25px]'>
-                    <img src="/nach-barber-new/media/barba.png" alt="" className='w-[60px] aspect-square mr-[15px]'/> 
+                <div className='flex justify-between items-center mt-[25px] mx-9'>
+                    <img src="/nach-barber-new/media/barba.png" alt="" className='hidden md:block w-[60px] aspect-square mr-[15px]'/> 
                     <div>
                         <p className='font-semibold text-2xl'>En <span className='text-red-600 font-bold'>NACH Barbershop</span>, transformamos tu estilo.</p>
                         <p className='text-2xl'>Vos solo preocupate por llevarlo con confianza</p>
                     </div>
                 </div>
 
-                <div className='flex justify-between items-center mt-[25px]'>
+                <div className='flex justify-between items-center mt-[25px] mx-9'>
+                    <img src="/nach-barber-new/media/peluqueria.png" alt="" className='hidden md:block h-[60px] px-[12.2px] mr-[15px]'/>
                     <div>
-                        <p className='font-semibold text-2xl'>En <span className='text-blue-600 font-bold'>NACH Barbershop</span>, garantizamos calidad y estilo.</p>
+                        <p className='font-semibold text-2xl'>Calidad, atención y estilo <span className='text-blue-600 font-bold'>garantizados</span></p>
                         <p className='text-2xl'>Una atención personalizada con productos premium</p>
                     </div>
-                    <img src="/nach-barber-new/media/peluqueria.png" alt="" className='h-[60px] ml-[15px]'/>
                 </div>
             </div>
 
