@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './card';
 
 interface ServicesProps {
-    currentPage?: string;
+    currentPage?: string; // Identifica la página actual
 }
 
 const Services: React.FC<ServicesProps> = ({ currentPage }) => {
@@ -33,9 +33,10 @@ const Services: React.FC<ServicesProps> = ({ currentPage }) => {
         },
     ];
 
+    // Si currentPage es "Inicio" o está vacío, solo mostramos las demás tarjetas sin la de Inicio
     const updatedCards =
         currentPage === 'Inicio' || !currentPage
-            ? cards
+            ? cards // Excluye la tarjeta de "Inicio"
             : [
                     {
                         id: 'Inicio',
@@ -43,7 +44,7 @@ const Services: React.FC<ServicesProps> = ({ currentPage }) => {
                         text: 'INICIO',
                         link: '/#inicio',
                     },
-                    ...cards.filter((card) => card.id !== currentPage),
+                    ...cards.filter((card) => card.id !== currentPage), // Excluir la tarjeta de la página actual
                 ];
 
     return (

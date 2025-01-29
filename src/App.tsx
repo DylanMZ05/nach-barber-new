@@ -10,11 +10,13 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { useEffect } from 'react';
 
 import ScrollToTop from './hooks/ScrollToTop';
+
 import CortesDeCabello from './components/services-links/CortesDeCabello';
 import CortesBarba from './components/services-links/CortesBarba';
 import DiseñosCabello from './components/services-links/DiseñosCabello';
 import Productos from './components/services-links/Productos';
 
+// ✅ Manejamos el desplazamiento hacia los anclajes con scroll suave
 const ScrollToHash: React.FC = () => {
     const location = useLocation();
 

@@ -21,13 +21,13 @@ const CortesDeCabello: React.FC = () => {
         <section className="text-center pt-30 px-2 max-w-[1800px] flex flex-col items-center justify-center mx-auto">
             <h1 className="text-4xl font-bold text-red-700">Cortes de Cabello</h1>
             <p className="mt-4 text-lg">Aquí puedes explorar los estilos de cortes de cabello más populares.</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
                 {cortes.map((corte) => (
                     <div key={corte.id} className="border rounded-lg shadow-lg hover:shadow-xl transition">
                         <img
                             src={corte.src}
                             alt={corte.alt}
-                            className="w-full h-auto rounded-t-lg aspect-square"
+                            className="w-full h-auto rounded-t-lg aspect-square sm:w-[47vw] md:w-[31vw] lg:w-[23vw] lg:max-w-[350px]"
                         />
                         <p className="p-2 font-medium text-gray-700">{corte.alt}</p>
                     </div>
