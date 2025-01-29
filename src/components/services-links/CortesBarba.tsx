@@ -9,7 +9,7 @@ const CortesBarba: React.FC = () => {
         { id: 2, src: "public/media/Barbas/barba-2.jpeg", alt: "Barba-2" },
         { id: 3, src: "public/media/Barbas/barba-3.jpeg", alt: "Barba-3" },
         { id: 4, src: "public/media/Barbas/barba-4.jpeg", alt: "Barba-4" },
-        { id: 4, src: "public/media/Barbas/barba-5.jpeg", alt: "Barba-4" },
+        { id: 5, src: "public/media/Barbas/barba-5.jpeg", alt: "Barba-5" },
     ]
 
     return (

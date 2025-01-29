@@ -14,8 +14,8 @@ const Productos: React.FC = () => {
         { id: 8, src: "public/media/Productos/productos8.jpeg", alt: "Producto-8" },
         { id: 9, src: "public/media/Productos/productos9.jpeg", alt: "Producto-9" },
         { id: 10, src: "public/media/Productos/productos10.jpeg", alt: "Producto-10" },
-        { id: 10, src: "public/media/Productos/productos11.jpeg", alt: "Producto-11" },
-        { id: 10, src: "public/media/Productos/productos12.jpeg", alt: "Producto-12" },
+        { id: 11, src: "public/media/Productos/productos11.jpeg", alt: "Producto-11" },
+        { id: 12, src: "public/media/Productos/productos12.jpeg", alt: "Producto-12" },
     ];
 
     return (

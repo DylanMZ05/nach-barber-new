@@ -11,12 +11,12 @@ const DiseñosCabello: React.FC = () => {
         { id: 5, src: "public/media/Diseños/diseño-5.jpg", alt: "Diseño-5" },
         { id: 6, src: "public/media/Diseños/diseño-6.jpg", alt: "Diseño-6" },
         { id: 7, src: "public/media/Diseños/diseño-7.jpg", alt: "Diseño-7" },
-        { id: 5, src: "public/media/Diseños/diseño-9.jpg", alt: "Diseño-8" },
-        { id: 6, src: "public/media/Diseños/diseño-10.jpg", alt: "Diseño-9" },
-        { id: 7, src: "public/media/Diseños/diseño-11.jpg", alt: "Diseño-10" },
-        { id: 6, src: "public/media/Diseños/diseño-12.jpg", alt: "Diseño-11" },
-        { id: 7, src: "public/media/Diseños/diseño-13.jpg", alt: "Diseño-12" },
-        { id: 6, src: "public/media/Diseños/diseño-14.jpg", alt: "Diseño-13" },
+        { id: 8, src: "public/media/Diseños/diseño-9.jpg", alt: "Diseño-8" },
+        { id: 9, src: "public/media/Diseños/diseño-10.jpg", alt: "Diseño-9" },
+        { id: 10, src: "public/media/Diseños/diseño-11.jpg", alt: "Diseño-10" },
+        { id: 11, src: "public/media/Diseños/diseño-12.jpg", alt: "Diseño-11" },
+        { id: 12, src: "public/media/Diseños/diseño-13.jpg", alt: "Diseño-12" },
+        { id: 13, src: "public/media/Diseños/diseño-14.jpg", alt: "Diseño-13" },
     ];
 
     return (
