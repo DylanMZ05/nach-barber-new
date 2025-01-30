@@ -7,7 +7,7 @@ import Sucursales from './components/sucursales';
 import Footer from './components/footer';
 
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import ScrollToTop from './hooks/ScrollToTop';
 
@@ -15,6 +15,8 @@ import CortesDeCabello from './components/services-links/CortesDeCabello';
 import CortesBarba from './components/services-links/CortesBarba';
 import DiseñosCabello from './components/services-links/DiseñosCabello';
 import Productos from './components/services-links/Productos';
+
+import AdminPage from './components/AdminPage';
 
 // ✅ Manejamos el desplazamiento hacia los anclajes con scroll suave
 const ScrollToHash: React.FC = () => {
@@ -32,7 +34,43 @@ const ScrollToHash: React.FC = () => {
     return null;
 };
 
+// ✅ Página de Login para proteger el Admin Panel
+const Login: React.FC<{ onLogin: (password: string) => void }> = ({ onLogin }) => {
+    const [password, setPassword] = useState('');
+
+    return (
+        <div className="flex flex-col items-center justify-center h-screen">
+            <h1 className="text-2xl font-bold mb-4">Admin Login</h1>
+            <input
+                type="password"
+                placeholder="Ingrese contraseña"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="border p-2 mb-4"
+            />
+            <button
+                onClick={() => onLogin(password)}
+                className="bg-blue-500 text-white px-4 py-2 rounded"
+            >
+                Ingresar
+            </button>
+        </div>
+    );
+};
+
+// ✅ Componente Principal
 function App() {
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+    // Función para manejar el login
+    const handleLogin = (password: string) => {
+        if (password === 'admin123') {
+            setIsAuthenticated(true);
+        } else {
+            alert('Contraseña incorrecta');
+        }
+    };
+
     return (
         <Router basename="/nach-barber-new">
             <ScrollToTop />
@@ -40,6 +78,7 @@ function App() {
             <Header />
 
             <Routes>
+                {/* Ruta principal */}
                 <Route
                     path="/"
                     element={
@@ -51,10 +90,22 @@ function App() {
                         </>
                     }
                 />
+                {/* Rutas de servicios */}
                 <Route path="/CortesDeCabello" element={<CortesDeCabello />} />
                 <Route path="/CortesBarba" element={<CortesBarba />} />
                 <Route path="/DiseñosCabello" element={<DiseñosCabello />} />
                 <Route path="/Productos" element={<Productos />} />
+                {/* Ruta del Admin Panel */}
+                <Route
+                    path="/admin"
+                    element={
+                        isAuthenticated ? (
+                            <AdminPage />
+                        ) : (
+                            <Login onLogin={handleLogin} />
+                        )
+                    }
+                />
             </Routes>
 
             <Footer />
