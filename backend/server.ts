@@ -1,6 +1,6 @@
-import express from "express";
-import sqlite3 from "sqlite3";
-import cors from "cors";
+import * as express from "express";
+import * as sqlite3 from "sqlite3";
+import * as cors from "cors";
 
 const app = express();
 const PORT = 5000;
