@@ -18,7 +18,6 @@ import Productos from './components/services-links/Productos';
 
 import AdminPage from './components/AdminPage';
 
-// ✅ Manejamos el desplazamiento hacia los anclajes con scroll suave
 const ScrollToHash: React.FC = () => {
     const location = useLocation();
 
@@ -34,7 +33,6 @@ const ScrollToHash: React.FC = () => {
     return null;
 };
 
-// ✅ Página de Login para proteger el Admin Panel
 const Login: React.FC<{ onLogin: (password: string) => void }> = ({ onLogin }) => {
     const [password, setPassword] = useState('');
 
@@ -58,14 +56,17 @@ const Login: React.FC<{ onLogin: (password: string) => void }> = ({ onLogin }) =
     );
 };
 
-// ✅ Componente Principal
 function App() {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    // Obtener estado de autenticación desde sessionStorage
+    const [isAuthenticated, setIsAuthenticated] = useState(
+        sessionStorage.getItem("auth") === "true"
+    );
 
     // Función para manejar el login
     const handleLogin = (password: string) => {
         if (password === 'admin123') {
             setIsAuthenticated(true);
+            sessionStorage.setItem("auth", "true"); // Guardar estado de login
         } else {
             alert('Contraseña incorrecta');
         }
@@ -95,6 +96,7 @@ function App() {
                 <Route path="/CortesBarba" element={<CortesBarba />} />
                 <Route path="/DiseñosCabello" element={<DiseñosCabello />} />
                 <Route path="/Productos" element={<Productos />} />
+                
                 {/* Ruta del Admin Panel */}
                 <Route
                     path="/admin"
