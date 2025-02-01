@@ -5,8 +5,24 @@
     <link rel="icon" type="image/svg+xml" href="/nach-barber-new/media/Logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nach Barbershop</title>
-    <script type="module" crossorigin src="/nach-barber-new/assets/index-DIIR7jll.js"></script>
-    <link rel="stylesheet" crossorigin href="/nach-barber-new/assets/index-Dl4bot2U.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            cargaPrecios();
+        });
+
+        function cargaPrecios(){
+            $.ajax({
+                type: 'POST',
+                url: 'https://ellocomazur.com/dylanmz/barberia/getListaPrecios2.php',
+                success: function(respuesta) {
+                    $("#divListaPrecios").append(respuesta);
+                }
+            });
+        }
+    </script>
+    <script type="module" crossorigin src="/nach-barber-new/assets/index-D1eUAL-6.js"></script>
+    <link rel="stylesheet" crossorigin href="/nach-barber-new/assets/index-CgDhO9o_.css">
   </head>
   <body>
     <div id="root"></div>
