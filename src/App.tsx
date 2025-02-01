@@ -6,7 +6,7 @@ import Prices from './components/prices';
 import Sucursales from './components/sucursales';
 import Footer from './components/footer';
 
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 import ScrollToTop from './hooks/ScrollToTop';
@@ -35,6 +35,16 @@ const ScrollToHash: React.FC = () => {
 
 const Login: React.FC<{ onLogin: (password: string) => void }> = ({ onLogin }) => {
     const [password, setPassword] = useState('');
+    const navigate = useNavigate(); // Para redirigir tras iniciar sesión
+
+    const handleLogin = () => {
+        if (password === 'admin123') {
+            onLogin(password);
+            navigate('/admin'); // Redirigir automáticamente
+        } else {
+            alert('Contraseña incorrecta');
+        }
+    };
 
     return (
         <div className="flex flex-col items-center justify-center h-screen">
@@ -47,7 +57,7 @@ const Login: React.FC<{ onLogin: (password: string) => void }> = ({ onLogin }) =
                 className="border p-2 mb-4"
             />
             <button
-                onClick={() => onLogin(password)}
+                onClick={handleLogin}
                 className="bg-blue-500 text-white px-4 py-2 rounded"
             >
                 Ingresar
@@ -73,7 +83,7 @@ function App() {
     };
 
     return (
-        <Router basename="/nach-barber-new">
+        <Router>
             <ScrollToTop />
             <ScrollToHash />
             <Header />
