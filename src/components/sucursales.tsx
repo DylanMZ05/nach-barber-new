@@ -23,7 +23,7 @@ const Sucursales: React.FC = () => {
                             </div>
                         </div>
                         
-                        <a href=""className="flex w-max items-center bg-white py-1 px-3 rounded-4xl">
+                        <a href="https://www.google.com.ar/maps/place/Nach+BarberShop/@-36.5350375,-56.6915225,21z/data=!4m6!3m5!1s0x959c1374f45f3a01:0x11f720f92bc61bf4!8m2!3d-36.5350339!4d-56.6914461!16s%2Fg%2F11sv_rbp7n?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" target="_blank" className="flex w-max items-center bg-white py-1 px-3 rounded-4xl">
                             <img src="/nach-barber-new/media/camino.png" alt="" className="h-[30px] aspect-square mr-1 "/>
                             <p className="font-semibold transform scale-y-120">Como llegar</p>
                         </a>
@@ -43,7 +43,7 @@ const Sucursales: React.FC = () => {
                             </div>
                         </div>
                         
-                        <a href=""className="flex w-max items-center bg-white py-1 px-3 rounded-4xl">
+                        <a href="https://www.google.com.ar/maps/@-36.5410252,-56.6898915,20.21z?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" target="_blank" className="flex w-max items-center bg-white py-1 px-3 rounded-4xl">
                             <img src="/nach-barber-new/media/camino.png" alt="" className="h-[30px] aspect-square mr-1 "/>
                             <p className="font-semibold transform scale-y-120">Como llegar</p>
                         </a>
