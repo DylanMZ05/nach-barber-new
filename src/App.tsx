@@ -67,16 +67,14 @@ const Login: React.FC<{ onLogin: (password: string) => void }> = ({ onLogin }) =
 };
 
 function App() {
-    // Obtener estado de autenticación desde sessionStorage
     const [isAuthenticated, setIsAuthenticated] = useState(
         sessionStorage.getItem("auth") === "true"
     );
 
-    // Función para manejar el login
     const handleLogin = (password: string) => {
         if (password === 'admin123') {
             setIsAuthenticated(true);
-            sessionStorage.setItem("auth", "true"); // Guardar estado de login
+            sessionStorage.setItem("auth", "true");
         } else {
             alert('Contraseña incorrecta');
         }

@@ -32,7 +32,7 @@ const Sucursales: React.FC = () => {
                 </div>
 
                 <div>
-                    <img src="/nach-barber-new/media/barberia.jpg" alt="" className="w-[450px] h-[300px] rounded-2xl mb-[15px]"/>
+                    <img src="/nach-barber-new/media/sucursal-2.png" alt="" className="w-[450px] h-[300px] rounded-2xl mb-[15px]"/>
                     
                     <div className="block sm:flex md:block lg:flex items-center justify-between">
                         <div className="mb-3 flex lg:mb-0">
